@@ -9,7 +9,6 @@ const useListenMessages = () => {
   const { messages, setMessages } = useConversation();
 
   useEffect(() => {
-    console.log("tets");
     socket?.on("newMessage", (newMessage) => {
       newMessage.shouldShake = true;
       const sound = new Audio(notificationSound);
